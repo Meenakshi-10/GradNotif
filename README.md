@@ -1,6 +1,6 @@
-# 🎓 Reddit University Mention Scraper
+# 🎓 GradNotif - Reddit University Mention Notifier
 
-This project is a Go-based Reddit scraper that monitors posts from the **"gradadmissions"** and **"mscs"** subreddits every 60 minutes to detect mentions of specific universities. The scraper runs concurrently for multiple subreddits, captures relevant posts containing target university names, and sends push notifications to your phone using Pushover. To automate execution,  you can run an executable of this code (as a CRON job or through OS task scheduler) on your PR at regular intervals, ensuring continuous monitoring without manual intervention.
+This project is a Go-based Reddit scraper that monitors posts from the **"gradadmissions"** and **"mscs"** subreddits every 10 minutes to detect mentions of specific universities. The scraper runs concurrently for multiple subreddits, captures relevant posts containing target university names, and sends push notifications to your phone using Pushover. To automate execution, a Windows Task Scheduler job runs the compiled program (`GradNotif.exe`) at regular intervals, ensuring continuous monitoring without manual intervention.
 
 ---
 
@@ -22,7 +22,7 @@ This project is a Go-based Reddit scraper that monitors posts from the **"gradad
    
    Run the following command to install the required libraries:  
    ```bash
-   go mod init GradNotif
+   go mod init gradnotif
    go get github.com/vartanbeno/go-reddit/v2
    go get github.com/joho/godotenv
    ```
@@ -33,14 +33,14 @@ This project is a Go-based Reddit scraper that monitors posts from the **"gradad
    go build -o GradNotif.exe main.go
    ```
 
-5. **Run the Scraper**  
+5. **Run the Notifier**  
    Execute the binary to start scraping:  
    ```bash
    ./GradNotif.exe
    ```
 
-6. **Automate the Scraper**  
-   To run the scraper every 10 minutes, set up a Windows Task Scheduler job as follows:  
+6. **Automate the Notifier**  
+   To run the notifier every 10 minutes, set up a Windows Task Scheduler job as follows:  
    - Open Task Scheduler and create a new basic task.  
    - Set the trigger to run every 10 minutes.  
    - Select **"Start a program"** and point to the compiled `GradNotif.exe` file.  
@@ -68,13 +68,15 @@ To receive push notifications when a target university is mentioned, follow thes
      ```
      PUSHOVER_TOKEN=your_pushover_api_token
      PUSHOVER_USER_KEY=your_pushover_user_key
+     TARGET_UNIVERSITIES=CMU,Stanford,UIUC,GaTech
      ```
    - Replace `your_pushover_api_token` and `your_pushover_user_key` with the actual values from your Pushover account.  
+   - Update the `TARGET_UNIVERSITIES` list with the universities you want to monitor.  
 
 ---
 
 ## 📝 License
-This project is licensed under the Apache License.
+This project is licensed under the Apache License 2.0.
 
-Feel free to reach out to meenakshisuresh112@gmail.com if you encounter any issues or have suggestions! Happy scraping! 😄
+Feel free to reach out if you encounter any issues or have suggestions! Happy scraping! 😄
 
