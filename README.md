@@ -1,6 +1,6 @@
 # 🎓 GradNotif - Reddit University Mention Notifier
 
-This project is a Go-based Reddit scraper that monitors posts from the **"gradadmissions"** and **"mscs"** subreddits every 10 minutes to detect mentions of specific universities. The scraper runs concurrently for multiple subreddits, captures relevant posts containing target university names, and sends push notifications to your phone using Pushover. To automate execution, a Windows Task Scheduler job runs the compiled program (`GradNotif.exe`) at regular intervals, ensuring continuous monitoring without manual intervention.
+This project is a Go-based Reddit scraper that monitors posts from the **"gradadmissions"** and **"MSCS"** subreddits every 60 minutes to detect mentions of specific universities. The scraper runs concurrently for multiple subreddits, captures relevant posts containing target university names, and sends push notifications to your phone using Pushover. To automate execution, a Windows Task Scheduler job runs the compiled program (`GradNotif.exe`) at regular intervals, ensuring continuous monitoring without manual intervention.
 
 ---
 
