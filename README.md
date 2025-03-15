@@ -78,5 +78,5 @@ To receive push notifications when a target university is mentioned, follow thes
 ## 📝 License
 This project is licensed under the Apache License 2.0.
 
-Feel free to reach out if you encounter any issues or have suggestions! Happy scraping! 😄
+Feel free to reach out at meenakshisuresh112@gmail.com if you encounter any issues or have suggestions! Happy scraping! 😄
 
